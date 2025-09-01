@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+<body>
+  <button onclick="document.getElementById('form').style.display='block'" id="index">Register</button><br>
+  <h1>Random</h1>
+  <p id="caption">The Shopping Expert</p>
+  <img src="image.png" align="left" class="image">
+
+<div id="form" class="background">
+  <span onclick="document.getElementById('form').style.display='none'" class="close" title="Close Background">&#10006;</span>
+  <form class="background-content" onsubmit="return validateForm()" method="post">
+    <div class="container">
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <input type="text" placeholder="Enter Email" id="email" name="email" required><br>
+      <span class="error" id="emailError"></span><br>
+
+      <input type="password" placeholder="Enter Password" id="password" name="psw" required><br>
+      <span class="error" id="passwordError"></span><br>
+
+      <input type="password" placeholder="Confirm Password" id="confirmPassword" name="psw-confirm" required><br>
+      <span class="error" id="confirmPasswordError"></span><br>
+
+      <label>
+        <input type="checkbox" required>Agree to our <a href="Terms&Conditions.html" style="color:dodgerblue">Terms & Conditions</a>.</label>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('form').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Register </button>
+      </div>
+    </div>
+  </form>
+</div>
+    <script>                     
+        function validateForm() {
+            
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var background = document.getElementById('form');
+
+            // Reset error messages
+            document.getElementById("emailError").innerHTML = "";
+            document.getElementById("passwordError").innerHTML = "";
+            document.getElementById("confirmPasswordError").innerHTML = "";
+            // Validation logic
+            var isValid = true;
+
+            if (!email.match(/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/)) {
+                document.getElementById("emailError").innerHTML = "Invalid email address";
+                isValid = false;
+            }
+
+            if (password.length < 8) {
+                document.getElementById("passwordError").innerHTML = "Password must be at least 8 characters long";
+                isValid = false;
+            }
+
+            if (password !== confirmPassword) {
+                document.getElementById("confirmPasswordError").innerHTML = "Passwords do not match";
+                isValid = false;
+            }
+
+            window.onclick = function(event) {
+                if (event.target == background) {
+                    background.style.display = "none";
+                }
+            }
+
+            if (!isValid) {
+                return false; // Prevent form submission
+            }
+
+            return true; // Form submission will proceed
+        }
+    </script>
+</body>
+</html>

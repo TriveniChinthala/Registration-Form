@@ -1,0 +1,158 @@
+body{ 
+  background-color:  rgba(43, 43, 43, 0.952);
+ } 
+ *{box-sizing:content-box}
+
+ .image{
+  width: 50%;
+  height: 30%;
+  padding-left: 5%;
+ }
+
+ h1{
+  color: #fefefe;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding-top: 2%;
+  padding-left: 5%;
+}
+ #caption{
+  color:#f8c4f5;
+  font-size: large;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 300;
+  padding-left: 5%;
+ }
+
+  input[type=text], input[type=password] {
+  width: 70%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+#index{
+  background-color: #04AA6D;
+  color: white;
+  padding: 1%;
+  border: none;
+  cursor: pointer;
+  width:11%;
+  opacity: 0.9;
+  font-family:'Courier New', Courier, monospace;
+  font-size: large;
+  font-weight: 500%;
+  float: right;
+  margin-right: 5%;
+}
+#index:hover{
+  opacity:1;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 18px 0;
+  border: none;
+  cursor: pointer;
+  width:25%;
+  opacity: 0.9;
+  font-family: tahoma;
+  font-size: medium;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: center;
+  width: 25%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.background{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #9ca4b6;
+  text-align: center;
+}
+
+/* Modal Content/Box */
+.background-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 5px solid #888;
+  border-radius: 5%;
+  width: 30%; /* Could be more or less, depending on screen size */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: medium;
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 28%;
+  top: 15px;
+  font-size: 30px;
+  font-weight:lighter;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.error{
+  color: red;
+}
+
+@media screen {
+  #index{
+    width:max-content;
+    height: max-content;
+  }
+  
+}
